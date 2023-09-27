@@ -22,7 +22,7 @@ public class SelIntroduction {
 
         System.out.println(driver.getCurrentUrl());
 
-        //driver.quit();
+        driver.quit();
 
        // driver.close();
     }
