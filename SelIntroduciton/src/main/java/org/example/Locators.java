@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
-public class Loctaors {
+public class Locators {
 
     public static void main(String[] args) {
 
@@ -26,8 +26,7 @@ public class Loctaors {
 
         driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("07802639715");
 
-        driver.findElement(By.xpath("//button[@class='reset-pwd-btn']")).click();
-
+        driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
 
     }
 }
