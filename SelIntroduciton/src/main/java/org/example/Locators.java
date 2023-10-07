@@ -7,7 +7,7 @@ import java.time.Duration;
 
 public class Locators {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -38,15 +38,23 @@ public class Locators {
 
         System.out.println(driver.findElement(By.cssSelector("form p")).getText());
 
+        driver.findElement(By.xpath("//div[@class='forgot-pwd-btn-conainer']/button[1]")).click();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         driver.findElement(By.cssSelector("#inputUsername")).sendKeys("rahul");
 
         driver.findElement(By.cssSelector("input[type*='pass']")).sendKeys("rahulshettyacademy");
 
         driver.findElement(By.id("chkboxOne")).click();
 
-        driver.findElement(By.xpath("//button[@class='submit']")).click();
 
-        driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
+
+        driver.findElement(By.xpath("//button[contains(text(),'Sign In')]")).click();
 
 
 
