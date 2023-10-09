@@ -14,10 +14,9 @@ public class Locators2 {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://rahulshettyacademy.com/locatorspractice/");
-
         String password= getPassword(driver);
-        driver.findElement(By.cssSelector(".go-to-login-btn")).click();
+        driver.get("https://rahulshettyacademy.com/locatorspractice/");
+        //driver.findElement(By.cssSelector(".go-to-login-btn")).click();
         Thread.sleep(2000);
         driver.findElement(By.id("inputUsername")).sendKeys("rahul");
         driver.findElement(By.name("inputPassword")).sendKeys(password);
