@@ -9,6 +9,7 @@ public class UpdateDropDown
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("http:/rahulshettyacademy.com/dropdownsPractise");
+
         driver.findElement(By.id("divpaxinfo")).click();
         Thread.sleep(2000L);
 
