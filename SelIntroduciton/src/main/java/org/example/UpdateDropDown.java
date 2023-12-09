@@ -9,7 +9,7 @@ public class UpdateDropDown
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("http:/rahulshettyacademy.com/dropdownsPractise");
-
+        driver.manage().window().maximize();
         driver.findElement(By.id("divpaxinfo")).click();
         Thread.sleep(2000L);
 
@@ -19,7 +19,16 @@ public class UpdateDropDown
         driver.findElement(By.id("btnclosepaxoption")).click();
         System.out.println( driver.findElement(By.id("divpaxinfo")).getText());
         Thread.sleep(2000L);
-        driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
-        driver.quit();
+
+        driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
+
+        driver.findElement(By.xpath("//a[@value='MAA']")).click();
+
+        Thread.sleep(5000L);
+
+        driver.findElement(By.xpath("//div[@id='ctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='BLR']")).click();
+
+        Thread.sleep(2000L);
+        //driver.quit();
     }
 }
