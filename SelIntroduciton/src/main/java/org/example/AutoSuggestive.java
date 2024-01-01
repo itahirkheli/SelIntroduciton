@@ -10,7 +10,7 @@ public class AutoSuggestive {
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
-        driver.get("http:/rahulshettyacademy.com/dropdownsPractise");
+        driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
         driver.manage().window().maximize();
         driver.findElement(By.id("autosuggest")).sendKeys("ind");
 
