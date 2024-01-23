@@ -21,7 +21,7 @@ public class calendar {
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
-         driver.findElement(By.cssSelector("#form-field-travel_comp_date")).click();
+        driver.findElement(By.cssSelector("#form-field-travel_comp_date")).click();
 
         Thread.sleep(3000);
 
